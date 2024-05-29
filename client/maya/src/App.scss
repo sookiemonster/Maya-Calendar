@@ -1,0 +1,36 @@
+$primary-color: #383838;
+$secondary-color: #754444;
+$light-gray: #e4e4e4;
+$white: #FFFFFF;
+
+$ROWS: 5;
+$COLS: 7;
+$cell-size: 150px;
+
+html, body {
+   padding: 0;
+   margin: 0;
+   width: 100%;
+   height: 100%;
+   box-sizing: content-box;
+}
+
+#calendar {
+   display: grid;
+   gap: 1px;
+   grid-template-columns: repeat($COLS, $cell-size);
+   grid-template-rows: repeat($ROWS, $cell-size);
+   background-color: $light-gray;
+
+   .cell {
+      display: flex;
+      flex-flow: column;
+      padding: 4px;
+      background-color: $white;
+
+      .day-number {
+         display: block;
+         align-self: flex-end;
+      }
+   }
+}

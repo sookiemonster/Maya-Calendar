@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const path = require('path');
 
 // Mount user routes
 const userRoutes = require("./userRoutes");
@@ -15,7 +16,7 @@ router.use("/calendar", calendarRoutes);
 // -- Landing
 
 router.get("/", (req, res) => {
-   res.send("Home page!")
+   res.send("PAGE");
 });
 
 module.exports = router;
